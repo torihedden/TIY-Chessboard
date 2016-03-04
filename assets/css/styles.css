@@ -1,0 +1,19 @@
+#board-area {
+  width: 60%;
+  height: 60%;
+  margin: 20%;
+  border: solid 4px red; }
+  #board-area div {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px; }
+  #board-area .white {
+    background-color: white;
+    width: 12.5%;
+    float: left; }
+  #board-area .black {
+    background-color: black;
+    width: 12.5%;
+    float: left; }
+
+/*# sourceMappingURL=styles.css.map */

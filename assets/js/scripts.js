@@ -22,9 +22,35 @@ $(document).ready(function(){
       $("#board-area").append("<div class = 'white square'></div>");
       $("#board-area").append("<div class = 'black square'></div>");
     }
-  }//closes board generator
+  }//closes board
 
-//replace later with unicode
+var king = "king"
+var queen = "queen"
+var bishop = "bishop"
+var rook = "rook"
+var knight = "knight"
+var pawn = "pawn"
+
+var white = "white"
+var black = "black"
+
+//places piece in again given location
+var piecePlace = function(index, piece, color){
+  $($(".square")[index]).append("<img src = 'assets/imgs/" + piece + color + ".png'></img>");
+}
+
+//converts position in 2D array to equivalent position in 1D array
+var arrayConverter = function(x, y){
+  var z =  8 * y + x;
+  return z;
+}
+
+var boardPlacer = function(x, y, piece, color){
+  piecePlace(arrayConverter(x, y), piece, color);
+}
+
+boardPlacer(3, 1, knight, white);
+
   var board = [
     ['R','N','B','Q','K','B','N','R'],
     ['P','P','P','P','P','P','P','P'],
@@ -36,26 +62,5 @@ $(document).ready(function(){
     ['r','n','b','q','k','b','n','r'] ];
   //fills the game board with the elements in the array
 
-  for (var x = 0; x < 8; x++){
-    var currentSquare = $(".square")[x];
-    $(currentSquare).append(board[0][x]);
-  }
-
-  for (var x = 8; x < 16; x++){
-    var currentSquare = $(".square")[x];
-    $(currentSquare).append(board[1][x]);
-  }
-
-  var board = "board1"
-
-  $("#back").click(function(){
-    board = "board" + 0;
-    console.log(board);
-  });
-
-  $("#forward").click(function(){
-    board = "board" + 1;
-    console.log(board);
-  });
 
 });

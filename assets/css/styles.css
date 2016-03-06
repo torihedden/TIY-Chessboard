@@ -2,23 +2,25 @@ body {
   background: #ffcc99; }
 
 #board-area {
-  width: 60%;
-  height: 60%;
   margin-left: 20%;
   margin-right: 20%;
   border: solid 4px red; }
   #board-area div {
     text-align: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    color: black; }
+    position: relative; }
+    #board-area div img {
+      position: absolute;
+      top: 10;
+      left: 20; }
   #board-area .white {
     background-color: white;
     width: 12.5%;
+    height: 12.5%;
     float: left; }
   #board-area .black {
     background-color: #47a3da;
     width: 12.5%;
+    height: 12.5%;
     float: left; }
 
 /*# sourceMappingURL=styles.css.map */

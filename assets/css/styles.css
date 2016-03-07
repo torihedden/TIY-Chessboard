@@ -1,26 +1,46 @@
 body {
-  background: #ffcc99; }
+  background: #ddd;
+  font-family: Arial, sans-serif; }
 
-#board-area {
-  margin-left: 20%;
-  margin-right: 20%;
-  border: solid 4px red; }
-  #board-area div {
+#content {
+  width: 90%; }
+
+#buttonbank {
+  display: block;
+  position: fixed;
+  bottom: 0; }
+
+#board-area, #rank {
+  margin: 0% 20%;
+  font-size: 1.5em; }
+  #board-area .ranksquare, #rank .ranksquare {
+    display: inline;
+    width: 12.5%;
+    margin-right: 9%; }
+  #board-area .filesquare, #rank .filesquare {
+    display: inline;
+    height: 12.5%;
+    padding: 5% 0%; }
+  #board-area .square, #rank .square {
     text-align: center;
     position: relative; }
-    #board-area div img {
+    #board-area .square img, #rank .square img {
       position: absolute;
       top: 10;
-      left: 20; }
-  #board-area .white {
+      left: 17; }
+  #board-area .white, #rank .white {
     background-color: white;
     width: 12.5%;
     height: 12.5%;
     float: left; }
-  #board-area .black {
+  #board-area .black, #rank .black {
     background-color: #47a3da;
     width: 12.5%;
     height: 12.5%;
     float: left; }
+  #board-area section, #rank section {
+    display: block;
+    position: fixed;
+    bottom: 0; }
 
 /*# sourceMappingURL=styles.css.map */

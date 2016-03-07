@@ -1,33 +1,58 @@
 $div-width: (100% / 8);
 
 body {
-  background: #ffcc99;
+  background: #ddd;
+  font-family: Arial, sans-serif;
 }
 
-#board-area {
-  margin-left: 20%;
-  margin-right: 20%;
-  border: solid 4px red;
-  div {
+#content {
+  width: 90%;
+}
+
+#buttonbank {
+  display: block;
+  position: fixed;
+  bottom: 0;
+}
+
+#board-area, #rank{
+  margin: 0% 20%;
+  font-size: 1.5em;
+  .ranksquare {
+    display: inline;
+    width: $div-width;
+    margin-right: 9%;
+  }
+  .filesquare {
+    display: inline;
+    height: $div-width;
+    padding: 5% 0%;
+  }
+  .square {
     text-align: center;
     position: relative;
     img {
       position: absolute;
       top: 10;
-      left: 20;
+      left: 17;
     }
   }
   .white {
     background-color: white;
-    width: (100% / 8);
-    height: (100% / 8);
+    width: $div-width;
+    height: $div-width;
     float: left;
   }
   .black{
     background-color: rgb(71,163,218);
-    width: (100% / 8);
-    height: (100% / 8);
+    width: $div-width;
+    height: $div-width;
     float: left;
   }
 
+  section {
+    display: block;
+    position: fixed;
+    bottom: 0;
+  }
 }

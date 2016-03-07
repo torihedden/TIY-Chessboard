@@ -230,5 +230,18 @@ drawBoard(boards[currentBoardIndex]);
     drawBoard(boards[currentBoardIndex])
   });
 
+ //  $("#play").click(function(){
+ //    setInterval(function(){
+ //      currentBoardIndex++
+ //      drawBoard(boards[currentBoardIndex]);
+ //    }, 500);
+ //
+ // });
+ //
+ // $("#pause").click(function(){
+ //  function myStopFunction() {
+ //    clearInterval(myVar);
+ //  }
+ // });
 
 });

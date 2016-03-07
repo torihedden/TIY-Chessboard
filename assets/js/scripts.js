@@ -230,18 +230,21 @@ drawBoard(boards[currentBoardIndex]);
     drawBoard(boards[currentBoardIndex])
   });
 
- //  $("#play").click(function(){
- //    setInterval(function(){
- //      currentBoardIndex++
- //      drawBoard(boards[currentBoardIndex]);
- //    }, 500);
- //
- // });
- //
- // $("#pause").click(function(){
- //  function myStopFunction() {
- //    clearInterval(myVar);
- //  }
- // });
+
+
+//Note: To be able to use the clearInterval() method, you must use a global variable when creating the interval method.
+//However, now this executes on page load. if I put boardPlay inside play event listener, pause won't work
+
+  $("#play").click(function(){
+    var boardPlay =   setInterval(function(){
+        currentBoardIndex++
+        drawBoard(boards[currentBoardIndex]);
+      }, 500);
+
+ });
+
+ $("#pause").click(function(){
+    window.clearInterval(boardPlay);
+ });
 
 });
